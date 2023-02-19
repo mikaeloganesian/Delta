@@ -1,5 +1,12 @@
 from tkinter import *
 
+
+
+def exit():
+    from main import root
+    root.destroy()
+    print('The app was closed')
+
 def createMenu(root):
     mainmenu = Menu(root)   
     root.config(menu=mainmenu)              #прикрепили объект меню к root
@@ -42,4 +49,4 @@ def createMenu(root):
     mainmenu.add_cascade(label='Планеметрия', menu=planemetryMenu)
     mainmenu.add_cascade(label='Стереометрия', menu=stereometryMenu)
     mainmenu.add_cascade(label='Калькуляторы', menu=calculatorMenu)
-    mainmenu.add_command(label='Выход', command='exit')
+    mainmenu.add_command(label='Выход', command=exit)

@@ -8,6 +8,7 @@ categoryName = ['Основы', 'Квадрат', 'Прямоугольник', 
 
 
 
+
 # window settings
 root = Tk()
 root.title('𝕯𝖊𝖑𝖙𝖆')
