@@ -1,27 +1,25 @@
 from tkinter import *
-from tkinter import ttk
 import getpass
+from menuCommands import *
 
 name = getpass.getuser()
 categoryName = ['Основы', 'Квадрат', 'Прямоугольник', 'Треугольник', 'Пр. треугольник', 'Окружность', 'Параллелограмм',
                 'Ромб', 'Трапеция', 'Основы', 'Куб', 'Параллелепипед', 'Призмы', 'Цилиндр', 'Пирамиды', 'Конусы', 'Шар', 'Тетраэдр']
 
 
-def finish():
-    root.destroy()
-    print('Закрытие приложения')
-
 
 # window settings
 root = Tk()
 root.title('𝕯𝖊𝖑𝖙𝖆')
-root.protocol('WM_DELETE_WINDOW', finish)
+
+createMenu(root)
+
 # window settings
 
 
 # UI creating
-helloLabel = Label(root, text=f'Привет, {name}. Это Дельта.',
-                   font=('Arial', '20', 'bold'), fg='slate gray')
+helloLabel = Label(root, text=f'Привет, {name}. Это Delta.',
+                   font=('Times New Roman', '20', 'bold'), fg='slate gray')
 helloLabelText = Label(root, text='Система-помощник для изучения геометрии',
                        font=('Times New Roman', '13'), fg='light slate gray')
 
@@ -55,14 +53,14 @@ i = 0
 for r in range(3):
     for c in range(3):
         button = Button(planemetryFrame,
-                        text=categoryName[i], width=13, padx=4, pady=4)
+                        text=categoryName[i], width=16, padx=4, pady=4, borderwidth=0)
         button.grid(row=r, column=c, padx=3, pady=3)
         i += 1
 
 for r in range(3):
     for c in range(3):
         button = Button(stereometryFrame,
-                        text=categoryName[i], width=13, padx=4, pady=4)
+                        text=categoryName[i], width=16, padx=4, pady=4, borderwidth=0)
         button.grid(row=r, column=c, padx=3, pady=3)
         i += 1
 # buttons creating + packing
