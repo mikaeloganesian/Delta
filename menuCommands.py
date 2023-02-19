@@ -1,10 +1,6 @@
 from tkinter import *
 
-
-def exit(root):
-    root.destroy()
-    print('The app was closed')
-
+    
 
 def createMenu(root):
     mainmenu = Menu(root)
@@ -38,14 +34,23 @@ def createMenu(root):
     stereometryMenu.add_command(label='Тетраэдр')
 # Меню для стереометрии
 
-# Меню для стереометрии
+# Меню для калькулятора
     calculatorMenu = Menu(mainmenu, tearoff=0)
     calculatorMenu.add_command(label='Планеметрический калькулятор')
     calculatorMenu.add_command(label='Стереометрический калькулятор')
-# Меню для стереометрии
+# Меню для калькулятора
+
+# Меню для справки
+    infoMenu = Menu(mainmenu, tearoff=0)
+    infoMenu.add_command(label='О проекте')
+    infoMenu.add_separator()
+    infoMenu.add_command(label='Создатели')
+    infoMenu.add_command(label='Поддержка')
+    infoMenu.add_command(label='Выход', command='exit')
+# Меню для справки
 
     mainmenu.add_command(label='Главная')
     mainmenu.add_cascade(label='Планеметрия', menu=planemetryMenu)
     mainmenu.add_cascade(label='Стереометрия', menu=stereometryMenu)
     mainmenu.add_cascade(label='Калькуляторы', menu=calculatorMenu)
-    mainmenu.add_command(label='Выход', command=lambda: exit(root))
+    mainmenu.add_cascade(label='Справка', menu=infoMenu)
