@@ -24,7 +24,7 @@ helloLabelText = Label(root, text='Система-помощник для изу
 
 planemetryFrame = Frame(root, bg='light slate gray', padx=30, pady=30)
 planemetryFrame.pack_propagate(False)
-planemetryLabel = Label(root, text='Планеметрия',
+planemetryLabel = Label(root, text='Планиметрия',
                         font=('Arial', '13', 'normal'), fg='slate gray')
 
 
