@@ -1,20 +1,19 @@
 from tkinter import *
-from PIL import Image, ImageTk
 
 
 class page():
-    def __init__(self, title, pageTitle, mainText, imageURL, seeMoreUrl): 
+    def __init__(self, title, pageTitle, mainText, imageURL, seeMoreUrl):
         self.title = title
         self.pageTitle = pageTitle
         self.mainText = mainText
         self.imageURL = imageURL
         self.seeMoreUrl = seeMoreUrl
-    
+
     def createPage(self):
             window = Tk()                   #window creating
             window.title(self.title)
             window.geometry('400x400')
-            
+
             title = Label(window, text=self.pageTitle, font=('Times New Roman', '20'), fg='slate gray', pady=6)      #title creating
             title.pack()
 
