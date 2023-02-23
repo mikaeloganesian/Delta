@@ -2,6 +2,8 @@ from tkinter import *
 import getpass
 from menuCommands import *
 
+from menuCommands import pagesArray
+
 name = getpass.getuser()
 categoryName = ['Основы', 'Квадрат', 'Прямоугольник', 'Треугольник', 'Пр. треугольник', 'Окружность', 'Параллелограмм',
                 'Ромб', 'Трапеция', 'Основы', 'Куб', 'Параллелепипед', 'Призмы', 'Цилиндр', 'Пирамиды', 'Конусы', 'Шар', 'Тетраэдр']
@@ -12,7 +14,6 @@ root = Tk()
 root.title('𝕯𝖊𝖑𝖙𝖆')
 
 createMenu(root)
-
 # window settings
 
 
@@ -35,6 +36,8 @@ stereometryLabel = Label(root, text='Стереометрия',
 # UI creating
 
 
+
+
 # UI pack
 helloLabel.pack(pady=(24, 0))
 helloLabelText.pack()
@@ -52,14 +55,14 @@ i = 0
 for r in range(3):
     for c in range(3):
         button = Button(planemetryFrame,
-                        text=categoryName[i], width=16, padx=4, pady=4, borderwidth=0)
+                        text=categoryName[i], width=16, padx=4, pady=4, borderwidth=0, command=lambda: pagesArray[i].createPage())
         button.grid(row=r, column=c, padx=3, pady=3)
         i += 1
 
 for r in range(3):
     for c in range(3):
         button = Button(stereometryFrame,
-                        text=categoryName[i], width=16, padx=4, pady=4, borderwidth=0)
+                        text=categoryName[i], width=16, padx=4, pady=4, borderwidth=0, command=lambda: pagesArray[i].createPage())
         button.grid(row=r, column=c, padx=3, pady=3)
         i += 1
 # buttons creating + packing
