@@ -72,6 +72,7 @@ def createMenu(root):
     infoMenu.add_separator()
     infoMenu.add_command(label='Created by 15lu.akari')
     infoMenu.add_command(label='4276 4000 7852 9352')
+    infoMenu.add_separator()
     infoMenu.add_command(label='Выход', command='exit')
 # Меню для справки
 
