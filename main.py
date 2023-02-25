@@ -1,13 +1,13 @@
-#On this page I'm creating main structur and logic for Delta
+# On this page I'm creating main structur and logic for Delta
 from tkinter import *
 import getpass
 from menuCommands import *
 from pagesArray import pagesArray
 import time
-import os
+from sys import platform
 
 
-if os.uname().sysname != 'Darwin':
+if platform == 'win32' or platform == 'win64':
     import pygame
     pygame.display.init()
     pygame.display.set_caption('𝕯𝖊𝖑𝖙𝖆')
@@ -30,6 +30,7 @@ categoryName = ['Основы', 'Квадрат', 'Прямоугольник', 
 # window settings
 root = Tk()
 root.title('𝕯𝖊𝖑𝖙𝖆')
+root.iconphoto(False, PhotoImage(file='startImg.png'))
 
 createMenu(root)
 # window settings
@@ -52,8 +53,6 @@ stereometryFrame.pack_propagate(False)
 stereometryLabel = Label(root, text='Стереометрия',
                          font=('Arial', '13', 'normal'), fg='slate gray')
 # UI creating
-
-
 
 
 # UI pack
