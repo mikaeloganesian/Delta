@@ -3,6 +3,21 @@ from tkinter import *
 import getpass
 from menuCommands import *
 from pagesArray import pagesArray
+import time
+import pygame
+
+
+pygame.display.init()
+pygame.display.set_caption('𝕯𝖊𝖑𝖙𝖆')
+img = pygame.image.load("images/startImg/startImg.png")
+pygame.display.set_icon(img)
+screen = pygame.display.set_mode(img.get_size())
+screen.blit(img, (0, 0))
+pygame.display.flip()
+time.sleep(6)
+pygame.quit()
+
+time.sleep(0.2)
 
 name = getpass.getuser()
 categoryName = ['Основы', 'Квадрат', 'Прямоугольник', 'Треугольник', 'Пр. треугольник', 'Окружность', 'Параллелограмм',

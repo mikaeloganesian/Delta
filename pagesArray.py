@@ -47,5 +47,3 @@ pagesArray.append(stereometryPyramidsPage)
 pagesArray.append(stereometryConesPage)
 pagesArray.append(stereometryBallPage)
 pagesArray.append(stereometryTetrahedronPage)
-
-print(pagesArray)
